@@ -19,6 +19,7 @@ export async function POST(request: Request) {
       phone,
       state,
       likedUniversities: [],
+      role: 'student',
       createdAt: new Date(),
       updatedAt: new Date()
     });

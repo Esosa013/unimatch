@@ -9,6 +9,7 @@ export interface User {
   phone?: string;
   state: string;
   likedUniversities: string[];
+  role: 'student' | 'admin';
   createdAt: Date;
   updatedAt: Date;
 }

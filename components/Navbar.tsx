@@ -7,6 +7,7 @@ import { User, LogOut, GraduationCap, Menu, X } from 'lucide-react';
 export default function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userEmail, setUserEmail] = useState('');
+  const [userRole, setUserRole] = useState('');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const router = useRouter();
 
@@ -16,6 +17,7 @@ export default function Navbar() {
     if (token && user) {
       setIsLoggedIn(true);
       setUserEmail(JSON.parse(user).email);
+      setUserRole(JSON.parse(user).role);
     }
   }, []);
 
@@ -47,9 +49,9 @@ export default function Navbar() {
                 <Link href="/dashboard" className="hover:text-blue-200 transition-colors">
                   Dashboard
                 </Link>
-                <Link href="/recommendations" className="hover:text-blue-200 transition-colors">
+                { userRole == 'student' && <Link href="/recommendations" className="hover:text-blue-200 transition-colors">
                   Find Universities
-                </Link>
+                </Link>}
               </>
             )}
             
