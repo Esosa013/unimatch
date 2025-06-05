@@ -39,7 +39,7 @@ export default function RecommendationForm({ onSubmit }: { onSubmit: (data: Form
 
   const nigerianStates = [
     "Ogun", "Adamawa", "Osun", "FCT", "Edo", "Lagos", "Kano", "Rivers", "Kaduna", "Oyo",
-    "Imo", "Enugu", "Delta", "Anambra", "Akwa Ibom", "Cross River", "Bayelsa", "Plateau"
+    "Imo", "Enugu", "Delta", "Anambra", "Akwa Ibom", "Cross River", "Bayelsa", "Plateau", "Nasawara"
   ];
 
   const popularCourses = [
